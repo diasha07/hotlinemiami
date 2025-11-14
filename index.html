@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotline Miami 3: Midnight Requiem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-entry {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        header {
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid #ff00ff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 3rem;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff00ff;
+        }
+
+        .socials a {
+            margin-left: 1rem;
+            text-decoration: none;
+        }
+
+        main {
+            margin-top: 100px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 100px auto 0;
+        }
+
+        section {
+            padding: 4rem 0;
+            opacity: 0;
+        }
+        #description p{
+            font-size: 1.5rem;
+        }
+        #developer p{
+            font-size: 1.5rem;
+        }
+        h2 {
+            color: #ff00ff;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+      
+        #countdown {
+            display: flex;
+            gap: 2rem;
+            font-size: 2rem;
+            justify-content: center;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        footer {
+            background: #111;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-top: 2px solid #ff00ff;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 100%;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+        .footer-content a{
+            color: #00ff00;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1.3rem;
+        }
+        .footer-content a:hover{
+            color: #ff00ff;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            #countdown {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="animate-entry">
+        <nav>
+            <div class="logo">HOTLINE MIAMI 3</div>
+            <div class="nav-links">
+                <a href="#gallery">Галерея</a>
+                <a href="#developer">О разработчике</a>
+                <a href="#release">Дата выхода</a>
+            </div>
+            <div class="socials">
+                <a href="https://dennatongames.com" target="_blank">Dennaton</a>
+                <a href="https://x.com/dennatongames" target="_blank">X</a>
+            </div>
+        </nav>
+    </header>
+
+<main>
+        <section id="description" class="animate-entry">
+            <h2>Описание игры</h2>
+            <p>Hotline Miami — это адреналиновый боевик, полный первобытной жестокости, смертельно опасных перестрелок и крышесносящих драк. Место действия — альтернативный город Майами 1989 года, где вам предстоит вжиться в шкуру загадочного антигероя. Он встал на тропу кровавой мести прогнившему преступному миру, потому что так приказал голос на его автоответчике. Вскоре вам и вашему герою предстоит узнать всю правду о том, что здесь творится и почему вы испытываете такую сильную жажду к жестоким убийствам.
+
+                Положитесь на свое изящество в, казалось бы, безвыходных ситуациях, когда безжалостные противники превосходят вас числом. Этот мир не терпит промедлений, здесь каждый выстрел смертелен, поэтому действовать нужно быстро и решительно, если вы хотите выжить и раскрыть тайну зловещих сил, которые стоят за этой резней. Неповторимый внешний вид Hotline Miami, будоражащее звуковое сопровождение и цепь сюрреалистичных событий бросят вызов вашей собственной кровожадности, возведя её в абсолют, который вы никогда не забудете.</p>
+        </section>
+
+        <section id="gallery" class="animate-entry">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <img src="photo1.jpeg" class="gallery-item" alt="Screenshot 1">
+                <img src="photo2.webp" class="gallery-item" alt="Screenshot 2">
+                <img src="photo3.jpg" class="gallery-item" alt="Screenshot 3">
+            </div>
+        </section>
+
+        <section id="developer" class="animate-entry">
+            <h2>Разработчики</h2>
+            <p>Dennaton Games — шведская компания, специализирующаяся на разработке видеоигр и основанная программистом Юнатаном Сёдерстрёмом и художником Деннисом Ведином. Название компании состоит из имён основателей. Юнатан Сёдерстрём, разработчик инди-видеоигр, ранее разрабатывал игры в Game Maker в качестве хобби. В интервью он сказал, что ему пора было начать зарабатывать на этом, поэтому он захотел создать более масштабный проект. Он связался со своим другом Деннисом Ведином, художником, и вместе они основали Dennaton Games, после чего начали разработку Hotline Miami[1].</p>
+        </section>
+
+        <section id="release" class="animate-entry">
+            <h2>Дата выхода</h2>
+            <div id="countdown"></div>
+        </section>
+    </main>
+
+    <footer class="animate-entry">
+        <div class="footer-content">
+            <div>© 2024 Dennaton Games. Все права защищены</div>
+            <div>
+                <a href="https://steamcommunity.com/app/219150"><img src="Steam-Logo.png" width="13%"></a><br>
+                <a href="https://x.com/hotlinemiami?lang=kn"><img src="x.webp" width="13%"></a>
+            </div>
+            <div>
+                <a href="#description">Описание</a><br><br>
+                <a href="#gallery">Галерея</a><br><br>
+                <a href="#developer">О нас</a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const countDownDate = new Date("Nov 15, 2026 00:00:00").getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = 
+                `<div>${days} дней</div>
+                <div>${hours} часов</div>
+                <div>${minutes} минут</div>
+                <div>${seconds} секунд</div>`
+            ;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "OUT NOW";
+            }
+        }, 1000);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
